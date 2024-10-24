@@ -17,7 +17,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Mercata STRATS LST",
+  title: "STRATS LST | BlockApps",
   description: "Stake your strats and earn rewards.",
 };
 
