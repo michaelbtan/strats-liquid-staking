@@ -10,11 +10,11 @@ function BalanceCard() {
         </CardHeader>
         <CardContent>
           <div className="flex justify-between">
-            <div className="text-sm text-zinc-400">STRATS</div>
+            <div className="text-sm text-zinc-400">$STRATS</div>
             <div className="text-xl font-bold">0.0000</div>
           </div>
           <div className="flex justify-between">
-            <div className="text-sm text-zinc-400">LSTRATS</div>
+            <div className="text-sm text-zinc-400">$LSTRATS</div>
             <div className="text-xl font-bold">0.0000</div>
           </div>
         </CardContent>

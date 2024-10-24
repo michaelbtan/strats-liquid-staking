@@ -17,7 +17,7 @@ function StakeView() {
         </div>
         <div className="flex items-center rounded-lg bg-zinc-800 p-2">
           <div className="flex items-center space-x-2">
-            <div className="h-6 w-6 rounded-full bg-orange-500" />
+            <div className="h-6 w-6 rounded-full bg-[#FF3200]" />
             <span>STRATS</span>
           </div>
           <Input

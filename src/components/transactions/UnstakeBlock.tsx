@@ -2,7 +2,7 @@ import React from 'react'
 
 function UnStakeBlock() {
   return (
-    <div className="bg-orange-500 text-white py-2 px-4 rounded-full text-center w-32">
+    <div className="bg-[#FF3200] text-white py-2 px-4 font-semibold rounded-full text-center w-32">
       Unstake
     </div>  
     )
