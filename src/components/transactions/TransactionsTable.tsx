@@ -3,56 +3,46 @@ import {
   TableBody,
   TableCaption,
   TableCell,
-  TableFooter,
   TableHead,
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import StakeBlock from "./StakeBlock";
+import UnStakeBlock from "./UnstakeBlock";
 
-const invoices = [
+const transactions = [
   {
-    invoice: "INV001",
-    paymentStatus: "Paid",
-    totalAmount: "$250.00",
-    paymentMethod: "Credit Card",
+    date: "2024-10-01",
+    type: "stake",
+    hash: "0x1234abcd5678efgh9012ijkl",
+    quantity: 10.5,
   },
   {
-    invoice: "INV002",
-    paymentStatus: "Pending",
-    totalAmount: "$150.00",
-    paymentMethod: "PayPal",
+    date: "2024-10-05",
+    type: "stake",
+    hash: "0x5678mnop9012qrst3456uvwx",
+    quantity: 3.25,
   },
   {
-    invoice: "INV003",
-    paymentStatus: "Unpaid",
-    totalAmount: "$350.00",
-    paymentMethod: "Bank Transfer",
+    date: "2024-10-12",
+    type: "unstake",
+    hash: "0x9abcde1234fgh5678ijkl901",
+    quantity: 5.0,
   },
   {
-    invoice: "INV004",
-    paymentStatus: "Paid",
-    totalAmount: "$450.00",
-    paymentMethod: "Credit Card",
+    date: "2024-10-15",
+    type: "stake",
+    hash: "0xdef01234abcd5678efgh9012",
+    quantity: 2.75,
   },
   {
-    invoice: "INV005",
-    paymentStatus: "Paid",
-    totalAmount: "$550.00",
-    paymentMethod: "PayPal",
-  },
-  {
-    invoice: "INV006",
-    paymentStatus: "Pending",
-    totalAmount: "$200.00",
-    paymentMethod: "Bank Transfer",
-  },
-  {
-    invoice: "INV007",
-    paymentStatus: "Unpaid",
-    totalAmount: "$300.00",
-    paymentMethod: "Credit Card",
+    date: "2024-10-20",
+    type: "stake",
+    hash: "0x3456mnop7890qrst1234uvwx",
+    quantity: 1.0,
   },
 ];
+
 
 export function TransactionsTable() {
   return (
@@ -62,20 +52,20 @@ export function TransactionsTable() {
         <TableCaption>A list of your transactions on STRATS LST.</TableCaption>
         <TableHeader>
           <TableRow>
-            <TableHead className="w-[100px]">Invoice</TableHead>
-            <TableHead>Status</TableHead>
-            <TableHead>Method</TableHead>
-            <TableHead className="text-right">Amount</TableHead>
+            <TableHead>Type</TableHead>
+            <TableHead>Date</TableHead>
+            <TableHead>Hash</TableHead>
+            <TableHead className="text-right">Quantity</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
-          {invoices.map((invoice) => (
-            <TableRow key={invoice.invoice}>
-              <TableCell className="font-medium">{invoice.invoice}</TableCell>
-              <TableCell>{invoice.paymentStatus}</TableCell>
-              <TableCell>{invoice.paymentMethod}</TableCell>
+          {transactions.map((transaction) => (
+            <TableRow key={transaction.hash}>
+              <TableCell>{transaction.type === 'stake' ? <StakeBlock /> : <UnStakeBlock />}</TableCell>
+              <TableCell className="font-medium">{transaction.date}</TableCell>
+              <TableCell>{transaction.hash}</TableCell>
               <TableCell className="text-right">
-                {invoice.totalAmount}
+                {transaction.quantity}
               </TableCell>
             </TableRow>
           ))}

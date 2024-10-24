@@ -1,6 +1,7 @@
 import { TransactionsTable } from "@/components/transactions/TransactionsTable";
 import StakingInfo from "@/components/staking/StakingInfo";
 import StakingCard from "@/components/staking/StakingCard";
+import BalanceCard from "@/components/balances/BalanceCard";
 
 export default function Home() {
   return (
@@ -28,7 +29,8 @@ export default function Home() {
                 Liquid Staking Card
               </h2>
               <div className="overflow-hidden">
-                <div className="p-6">
+                <div className="p-6 space-y-4">
+                  <BalanceCard />
                   <StakingCard />
                 </div>
               </div>

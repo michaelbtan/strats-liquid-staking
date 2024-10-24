@@ -2,14 +2,20 @@
 import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
+import StakeView from "./StakeView";
+import UnstakeView from "./UnstakeView";
 
 export default function StakingCard() {
   const [view, setView] = useState("stake");
+  const [amount, setAmount] = useState(0);
 
   return (
     <Card className="w-full max-w-md bg-zinc-900 text-white">
       <CardHeader>
-        <CardTitle className="text-2xl font-bold">Convert to $LSTRAT</CardTitle>
+        <CardTitle className="text-2xl font-bold">
+          {view === "stake" ? "Convert to $LSTRAT" : "Convert to $STRAT"
+          }
+          </CardTitle>
       </CardHeader>
       <CardContent className="space-y-4">
         <div className="w-full max-w-md mx-auto">
@@ -38,8 +44,7 @@ export default function StakingCard() {
             </ToggleGroupItem>
           </ToggleGroup>
         </div>
-
-
+        {view === "stake" ? <StakeView /> : <UnstakeView />}
         <div className="flex justify-between text-sm text-zinc-400">
           <span>1 $STRAT</span>
           <span>≈1 $LSTRAT</span>
