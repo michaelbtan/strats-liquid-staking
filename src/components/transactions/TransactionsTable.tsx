@@ -59,7 +59,7 @@ export function TransactionsTable() {
     <div>
         <h1 className="text-2xl mb-4">Transaction History</h1>
       <Table>
-        <TableCaption>A list of your transactions on STRAT LST.</TableCaption>
+        <TableCaption>A list of your transactions on STRATS LST.</TableCaption>
         <TableHeader>
           <TableRow>
             <TableHead className="w-[100px]">Invoice</TableHead>
