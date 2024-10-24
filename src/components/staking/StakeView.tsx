@@ -1,7 +1,7 @@
 import React from "react";
 import { Wallet } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { StakeConfirmationDialog } from "./StakeConfirmationDialog";
 
 function StakeView() {
   return (
@@ -41,9 +41,7 @@ function StakeView() {
           </div>
         </div>
       </div>
-      <Button className="w-full bg-blue-500 py-6 text-lg font-semibold hover:bg-blue-600">
-        Convert to $LSTRATS
-      </Button>
+      <StakeConfirmationDialog />
     </div>
   );
 }

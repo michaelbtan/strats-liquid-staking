@@ -1,7 +1,7 @@
 import React from "react";
 import { Wallet } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { UnStakeConfirmationDialog } from "./UnstakeConfirmationDialog";
 
 export default function UnStakeView() {
   return (
@@ -41,9 +41,7 @@ export default function UnStakeView() {
           </div>
         </div>
       </div>
-      <Button className="w-full bg-[#FF3200] py-6 text-lg font-semibold hover:bg-[#D72800]">
-      Convert to $STRATS
-      </Button>
+      <UnStakeConfirmationDialog />
     </div>
   );
 }
