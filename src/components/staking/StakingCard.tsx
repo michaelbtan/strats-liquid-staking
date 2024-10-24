@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 
 export default function StakingCard() {
-  const [value, setValue] = useState("stake");
+  const [view, setView] = useState("stake");
 
   return (
     <Card className="w-full max-w-md bg-zinc-900 text-white">
@@ -15,8 +15,8 @@ export default function StakingCard() {
         <div className="w-full max-w-md mx-auto">
           <ToggleGroup
             type="single"
-            value={value}
-            onValueChange={(value) => setValue(value)}
+            value={view}
+            onValueChange={(view) => setView(view)}
             className="grid grid-cols-2 gap-2 p-1 rounded-full"
           >
             <ToggleGroupItem
@@ -24,7 +24,7 @@ export default function StakingCard() {
               className="rounded-full py-2 text-sm font-medium"
             >
               Stake
-              {value === "stake" && (
+              {view === "stake" && (
                 <span className="ml-2 inline-flex items-center rounded-full bg-green-500 px-2 py-1 text-xs font-medium text-white">
                   ≈ 8.00% APY
                 </span>
