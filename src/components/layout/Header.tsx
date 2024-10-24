@@ -5,7 +5,7 @@ import logo from "@/assets/logo.png";
 
 export default async function Header() {
   return (
-    <header className="bg-transparent top-0 backdrop-blur-sm">
+    <header className="bg-transparent top-0">
       <nav
         className="mx-auto flex items-center justify-between p-6 lg:px-8"
         aria-label="Global"

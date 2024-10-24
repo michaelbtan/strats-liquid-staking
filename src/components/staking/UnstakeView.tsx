@@ -41,8 +41,8 @@ export default function UnStakeView() {
           </div>
         </div>
       </div>
-      <Button className="w-full bg-blue-500 py-6 text-lg font-semibold hover:bg-blue-600">
-        Convert to $LSTRATS
+      <Button className="w-full bg-[#FF3200] py-6 text-lg font-semibold hover:bg-[#D72800]">
+      Convert to $STRATS
       </Button>
     </div>
   );

@@ -13,7 +13,7 @@ export default function StakingCard() {
     <Card className="w-full max-w-md bg-zinc-900 text-white">
       <CardHeader>
         <CardTitle className="text-2xl font-bold">
-          {view === "stake" ? "Convert to $LSTRAT" : "Convert to $STRAT"
+          {view === "stake" ? "Convert to $LSTRATS" : "Convert to $STRATS"
           }
           </CardTitle>
       </CardHeader>

@@ -22,7 +22,7 @@ export default function StakingInfo() {
 
         <hr className="border-gray-800" />
 
-        <div className={`space-y-4 ${showMore ? "" : "mb-4"}`}>
+        <div className={`space-y-4 ${showMore ? "" : "space-y-2 md:space-y-4 mb-0"}`}>
           <h2 className="text-2xl md:text-3xl font-bold">
             What is Liquid Staking?
           </h2>
