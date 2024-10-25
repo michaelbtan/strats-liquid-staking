@@ -48,7 +48,7 @@ export function TransactionsTable() {
   return (
     <div>
         <h1 className="text-2xl mb-4">Transaction History</h1>
-      <Table>
+      <Table className="mb-12">
         <TableCaption>A list of your transactions on STRATS LST.</TableCaption>
         <TableHeader>
           <TableRow>
