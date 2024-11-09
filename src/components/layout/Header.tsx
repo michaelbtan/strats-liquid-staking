@@ -11,7 +11,7 @@ export default async function Header() {
         aria-label="Global"
       >
         <Link href="/" className="-m-1.5 p-1.5">
-          <span className="sr-only">Jovi</span>
+          <span className="sr-only">BlockApps</span>
             <Image src={logo} alt="BlockApps Logo" width={40} height={40} />
         </Link>
         {/* Navigation for desktop */}
